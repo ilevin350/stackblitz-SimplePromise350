@@ -67,15 +67,15 @@ const myPromise = new Promise<string>((resolve, reject) => {
 myPromise
   .then(                                                     // Link #1
     (value) => `${value} link #1 resolved</br>`, 
-    // (reason) => `${reason} link #1 rejected</br>`
+    (reason) => `${reason} link #1 rejected</br>`
   )
   .then(                                                     // Link #2
     (value) => `${value} link #2 resolved</br>`,
-    // (reason) => `${reason} link #2 rejected</br>`
+    (reason) => `${reason} link #2 rejected</br>`
   )
   .then(                                                     // Link #3
     (value) => `${value} link #3 resolved</br>`,
-    // (reason) => `${reason} link #3 rejected</br>`
+    (reason) => `${reason} link #3 rejected</br>`
     )
   .then((value) => (outputDiv.innerHTML = value))            // Link #4
   .catch((err) => {
